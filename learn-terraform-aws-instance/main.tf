@@ -1,4 +1,13 @@
 terraform {
+  # Terraform Cloudを設定
+  cloud {
+    organization = "learn-terraform-aws-itoo"
+    workspaces {
+      name = "terraform"
+    }
+  }
+
+  # AWS
   required_providers {
     aws = {
       source  = "hashicorp/aws"
