@@ -13,12 +13,6 @@ provider "aws" {
   region = "ap-northeast-1"
 }
 
-variable "instance_name" {
-  description = "EC2 instance name"
-  type = string
-  default = "ExampleAppServerInstance"
-  
-}
 resource "aws_instance" "app_server" {
   ami           = "ami-0091f05e4b8ee6709"
   instance_type = "t2.micro"
